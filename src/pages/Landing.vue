@@ -3,12 +3,12 @@
     <div class="page-header page-header-small">
       <parallax
         class="page-header-image"
-        style="background-image: url('img/bg6.jpg')"
+        style="background-image: url('img/derpPickle.jpg')"
       >
       </parallax>
       <div class="content-center">
         <div class="container">
-          <h1 class="title">This is our great company.</h1>
+          <h1 class="title">Braden Burch</h1>
           <div class="text-center">
             <a href="#pablo" class="btn btn-primary btn-icon btn-round">
               <i class="fab fa-facebook-square"></i>
@@ -27,7 +27,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">Who we are?</h2>
+            <h2 class="title">Who am I?</h2>
             <h5 class="description">
               According to the National Oceanic and Atmospheric Administration,
               Ted, Scambos, NSIDClead scentist, puts the potentially record low
@@ -46,11 +46,11 @@
               >
                 <!-- First image on the left side -->
                 <p class="blockquote blockquote-primary">
-                  "Over the span of the satellite record, Arctic sea ice has
-                  been declining significantly, while sea ice in the
-                  Antarctichas increased very slightly"
-                  <br />
-                  <br />
+                  "ikjlhhhhhhhhhh
+                  hhhhhhhhhhhhhhhh
+                  uyyyyyyyyyyygggg
+                  bcbcbcbcbcbcbcbc
+                 
                   <small>-NOAA</small>
                 </p>
               </div>
@@ -109,7 +109,7 @@
             <div class="col-md-4">
               <div class="team-player">
                 <img
-                  src="img/avatar.jpg"
+                  src="img/derpPickle.jpg"
                   alt="Thumbnail Image"
                   class="rounded-circle img-fluid img-raised"
                 />
@@ -135,7 +135,7 @@
             <div class="col-md-4">
               <div class="team-player">
                 <img
-                  src="img/ryan.jpg"
+                  src="img/derpPickle.jpg"
                   alt="Thumbnail Image"
                   class="rounded-circle img-fluid img-raised"
                 />
@@ -158,7 +158,7 @@
             <div class="col-md-4">
               <div class="team-player">
                 <img
-                  src="img/eva.jpg"
+                  src="img/derpPickle.jpg"
                   alt="Thumbnail Image"
                   class="rounded-circle img-fluid img-raised"
                 />
@@ -224,14 +224,33 @@
         </div>
       </div>
     </div>
+    <!-- Gallery -->
+    <div class="section" style="height:1000px !important">
+      <div class="container">
+      <gallery :images="images" :index="index" @close="index = null"></gallery>
+      <div
+        class="image"
+        v-for="(image, imageIndex) in images"
+        :key="imageIndex"
+        @click="index = imageIndex"
+        :style="{ backgroundImage: 'url(' + image + ')', width: '500px', height: '350px' }"
+      ></div>
+      </div>
+    </div>
   </div>
 </template>
+
+
 <script>
+import VueGallery from 'vue-gallery';
 import { Button, FormGroupInput } from '@/components';
+
+
 export default {
   name: 'landing',
   bodyClass: 'landing-page',
   components: {
+    'gallery': VueGallery,
     [Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput
   },
@@ -241,9 +260,28 @@ export default {
         firstName: '',
         email: '',
         message: ''
-      }
+      },
+      images: [
+          'img/derpPickle.jpg',
+          'img/derpPickle.jpg',
+          'img/derpPickle.jpg',
+          'img/derpPickle.jpg',
+        ],
+        index: null
     };
-  }
-};
+  },
+}
 </script>
-<style></style>
+
+<style scoped>
+  .image {
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+    margin-left: 48px;
+    margin-top: 40px;
+  }
+</style> 

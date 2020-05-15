@@ -22,12 +22,12 @@
 
             <template slot="navbar-menu">
               <li class="nav-item active">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="file:///C:/Users/Owner/Documents/Portfolio-/Gallery.html">
                   <p>Link</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="file:///C:/Users/Owner/Documents/Portfolio-/Gallery.html">
                   <p>Link</p>
                 </a>
               </li>
